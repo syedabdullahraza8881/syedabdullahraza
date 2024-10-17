@@ -1,0 +1,821 @@
+html, body {
+    height: 100%; /* Ensures the body covers the full height */
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+}
+
+/* Additional styling if needed to adjust text alignment */
+.header-text {
+    text-align: center;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E2F1E7; /* Light background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styles */
+header {
+    background-color: #243642; /* Dark background for header */
+    color: #E2F1E7;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* To handle the dropdown positioning */
+}
+
+nav ul li a {
+    color: #E2F1E7; /* Light text color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Navigation Links */
+nav ul li a:hover {
+    background-color: #387478; /* Hover background color */
+    color: #E2F1E7; /* Light color on hover */
+    border-radius: 4px; /* Rounded corners on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #629584; /* Light background for dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: #243642; /* Dark color for dropdown links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #387478; /* Hover effect */
+    color: #E2F1E7; /* Light color on hover */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Welcome Hero Section with Background Image */
+.welcome-hero {
+    background: url('assets/images/hero-background.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.welcome-hero h2 {
+    font-size: 48px;
+    line-height: 1.5;
+    color: #E2F1E7; /* Light color for headings */
+}
+
+.welcome-hero h2 span {
+    color: #387478; /* Accent color for span */
+}
+
+.welcome-hero p {
+    font-size: 18px;
+    color: #E2F1E7; /* Light text for the description */
+}
+
+.welcome-hero a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #387478; /* Button background */
+    color: #E2F1E7;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.welcome-hero a:hover {
+    background-color: #243642;
+    color: #E2F1E7;
+}
+
+/* Footer */
+footer {
+    background-color: #243642;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-hero {
+        padding: 50px 0;
+    }
+
+    .welcome-hero h2 {
+        font-size: 36px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        min-width: 100%;
+    }
+}
+
+/* about page css start here */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E2F1E7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Heading */
+.section-heading {
+    margin-bottom: 50px;
+    color: #243642;
+    text-align: center; /* Center the section heading */
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #243642;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-heading h2::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #387478;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About Section */
+/* about page styles */
+.about {
+    padding: 80px 0;
+    text-align: center; /* Center all content */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack image on top of text */
+    align-items: center; /* Center both text and image */
+}
+
+.single-about-img {
+    margin-bottom: 20px; /* Adds space between image and text */
+}
+
+.single-about-img img {
+    width: 200px; /* Set a fixed size for the image */
+    height: 200px; /* Keep it proportional for a circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle area */
+    border: 5px solid #387478; /* Optional: Add a border around the image */
+}
+
+.single-about-txt {
+    max-width: 700px; /* Ensures the text area isn't too wide */
+    text-align: left;
+}
+
+.single-about-txt h3 {
+    font-size: 24px;
+    color: #243642;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.single-about-txt p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.single-about-txt ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.single-about-txt ul li {
+    margin-bottom: 10px;
+    color: #243642;
+}
+
+.single-about-txt ul li strong {
+    color: #387478;
+}
+
+/* Social Media Icons */
+.about-list-icon {
+    margin-top: 20px;
+}
+
+.about-list-icon ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.about-list-icon ul li {
+    display: inline-block;
+}
+
+.about-list-icon ul li a {
+    font-size: 20px;
+    color: #243642;
+    transition: color 0.3s ease;
+}
+
+.about-list-icon ul li a:hover {
+    color: #387478;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .single-about-img img {
+        width: 150px;
+        height: 150px; /* Adjust image size for smaller screens */
+    }
+
+    .single-about-txt {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .single-about-txt ul {
+        padding-left: 0;
+    }
+}
+
+/* Experience Page Specific Styles */
+.experience {
+    padding: 80px 0;
+}
+
+.experience-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Timeline */
+.main-timeline {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.main-timeline ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.main-timeline ul li {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* Stack each block vertically */
+    align-items: center; /* Aligns all content in the center */
+    width: 100%;
+}
+
+.main-timeline ul li .experience-time {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px; /* Space between date and content */
+}
+
+.main-timeline ul li .experience-time h2 {
+    font-size: 24px;
+    color: #387478;
+    margin: 0;
+}
+
+.main-timeline ul li .experience-time h3 {
+    font-size: 18px;
+    color: #243642;
+    margin: 0;
+}
+
+.main-timeline ul li .timeline-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width for the content */
+    max-width: 700px; /* Ensures all blocks have the same maximum width */
+    position: relative;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column; /* Ensure content is stacked */
+    justify-content: space-between; /* Equal vertical spacing */
+    min-height: 250px; /* Ensures all blocks have the same minimum height */
+}
+
+/* Ensures each block has the same size */
+.main-timeline ul li .timeline-content p {
+    flex-grow: 1; /* Makes the description fill up the space equally */
+}
+
+.main-timeline ul li .timeline-content h4,
+.main-timeline ul li .timeline-content h5 {
+    margin-bottom: 10px;
+}
+
+.main-timeline ul li .timeline-content h4 {
+    font-size: 20px;
+    color: #243642;
+}
+
+.main-timeline ul li .timeline-content h5 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.main-timeline ul li .timeline-content p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 10px; /* Space below description */
+}
+
+/* Responsive Design for Experience Page */
+@media (max-width: 768px) {
+    .experience-content {
+        text-align: center; /* Center content on smaller screens */
+    }
+
+    .main-timeline ul li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-timeline ul li .timeline-content {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 90%; /* Ensures full width on mobile */
+    }
+}
+
+/* Education Page Specific Styles */
+.education {
+    padding: 80px 0;
+}
+
+.education-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Education Box Layout */
+.single-education-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.education-time {
+    width: 30%;
+    text-align: right;
+}
+
+.education-time h2 {
+    font-size: 24px;
+    color: #387478;
+    margin: 0;
+}
+
+.education-time h3 {
+    font-size: 18px;
+    color: #243642;
+    margin: 0;
+}
+
+.education-details {
+    width: 65%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.education-details h4 {
+    font-size: 20px;
+    color: #243642;
+    margin-bottom: 10px;
+}
+
+.education-details p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Education Page */
+@media (max-width: 768px) {
+    .single-education-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-time {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .education-details {
+        width: 100%;
+    }
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.projects-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-project-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.single-project-box h3 {
+    font-size: 24px;
+    color: #243642;
+    margin-bottom: 15px;
+}
+
+.single-project-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Projects Section */
+@media (max-width: 768px) {
+    .projects-content {
+        padding: 20px;
+    }
+}
+
+
+
+
+/* Skills Section */
+.skills {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.skills-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-skill-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.single-skill-box h3 {
+    font-size: 24px;
+    color: #243642;
+    margin-bottom: 15px;
+}
+
+.single-skill-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 768px) {
+    .skills-content {
+        padding: 20px;
+    }
+}
+
+/* Achievements Section */
+.achievements {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.achievements-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-achievement-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.single-achievement-box h3 {
+    font-size: 24px;
+    color: #243642;
+    margin-bottom: 15px;
+}
+
+.single-achievement-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Achievements Section */
+@media (max-width: 768px) {
+    .achievements-content {
+        padding: 20px;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #243642;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #387478;
+    color: #E2F1E7;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #243642;
+}
+
+.form-message {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 15px;
+    }
+}
+
+
+/* Certificates Section Styles */
+.certificates {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.certificates-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-certificate {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.single-certificate h3 {
+    font-size: 24px;
+    color: #243642;
+    margin-bottom: 10px;
+}
+
+.single-certificate p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #387478;
+    color: #E2F1E7;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #243642;
+    color: #E2F1E7;
+}
+
+/* Responsive Design for Certificates Section */
+@media (max-width: 768px) {
+    .certificates-content {
+        padding: 20px;
+    }
+
+    .single-certificate {
+        text-align: center;
+    }
+}
+
+/* Resume Section Styles */
+.resume {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.resume-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #387478;
+    color: #E2F1E7;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #243642;
+    color: #E2F1E7;
+}
+
+/* Responsive Design for Resume Section */
+@media (max-width: 768px) {
+    .resume-content {
+        padding: 20px;
+    }
+}
